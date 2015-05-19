@@ -172,9 +172,29 @@ W powyższej równości uwzględniono fakt, że szum pokrył się z badanym piki
 
 Powyższa metoda nie jest metodą dokładną, ponieważ założenie, że dla napięcia 1200V $M$=1 jest przybliżeniem. Pozwala ona jednak na wyznaczenie rzędu wielkości wzmocnienia gazowego w detektorze proporcjonalnym.
 
-\subsection{have fun :)}
+\subsection{Rentgenowska analiza fluorescencyjna.}
 
+Ćwiczenie rozpoczęto od pomiaru widm różniczkowych trzech źródeł o znanej zawartości procentowej żelaza. Na podstawie otrzymanych wyników przedstawiono na wykresie \ref{zaleznosc} zależność liczby zliczeń w piku głównym od stężenia żelaza. Pomiary dla poszczególnych próbek trwały 100 sekund.
 
+\begin{figure}[h!]
+	\centering	
+	\fontsize{12}{16}\selectfont % zmniejszam czcionke
+	\resizebox{0.9\textwidth}{!}{\input{wykres}}		
+	\caption{Zależność liczby zliczeń w piku głównym żelaza od stężenia procentowego.}
+	\label{zaleznosc}
+\end{figure}
+
+Za pomocą programu $GNUplot$ i funkcji $fit$ dopasowano prostą do otrzymanych danych. Otrzymano równanie:
+\begin{equation}
+	l_z = 3632,17\cdot \rho + 79999,17
+	\label{prosta}
+\end{equation}
+Gdzie $l_z$ oznacza liczbę zliczeń w piku głównym. \\
+
+Następnie analogiczny pomiar liczby zliczeń w czasie 100 sekund przeprowadzono dla próbki o nieznanej zawartości procentowej żelaza. Otrzymano $110323$ zliczeń. Korzystając ze wzoru \ref{prosta} otrzymujemy, że stężenie badanej próbki wynosi: $\rho = 8,35 \%$. 
+\section{Wnioski}
+
+Celem drugiego ćwiczenia było zapoznanie się z podstawami rentgenowskiej analizy fluorescencyjnej i wyznaczenie zawartości żelaza w nieznanej próbce. W tym celu wykonano trzy pomiary dla próbek wzorcowych o zawartości żelaza 2\%, 8\% oraz 11\%. Przy pomocy programu Gnuplot wyznaczono zależność liniową pomiędzy liczbą zliczeń w piku głównym a stężeniem żelaza w badanej próbce. Otrzymano, że badana "nieznana" próbka zawiera 8,35 \% żelaza.
 %%%%%%%%%%%% BIBLIOGRAFIA %%%%%%%%%%%%
 \newpage
 \begin{thebibliography}{9}
